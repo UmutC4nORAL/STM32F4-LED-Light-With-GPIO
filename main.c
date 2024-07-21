@@ -11,7 +11,7 @@ int main(){
 	while(1){
 		if(GPIOA_IDR & (1U <<0)){ // Check pin 0 of GPIO A port
 			GPIOD_ODR |= 1U << 15; // Light on blue LED
-			for(i=0;i<1000000;i++);
+			for(i=0;i<1000000;i++); // Wait
 			GPIOD_ODR &= ~(1U << 15); // Light off the blue LED
 		}
 	}
